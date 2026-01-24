@@ -1,7 +1,8 @@
 # 90 Days DevOps & Cloud Learning Plan.
 
 ## Current Level....
-I am a beginner / fresher with basic IT knowledge. I am new to DevOps and Cloud but serious about learning and building a career in this field.
+#### Me Muhammad Ishaq, 
+I am committed  for the next 90 days to learning DevOps fundamentals step by step. I am a beginner / fresher with basic IT knowledge. I am new to DevOps and Cloud but serious about learning and building a career in this field.
 
 ## What is DevOps...
 I understand DevOps as a culture where development and operations work together to build, test, deploy, and maintain applications smoothly. Cloud computing helps us use servers and services over the internet without managing hardware, which makes systems faster and scalable.
