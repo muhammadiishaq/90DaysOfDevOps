@@ -1,5 +1,7 @@
 # Day 24 – Advanced Git: Merge, Rebase, Stash & Cherry Pick....
 
+## Task 1: merge git
+
 Create a new branch **feature-login** from **main**, add a few commits to it.
 
 Switch back to **main** and merge **feature-login** into **main**.
@@ -9,6 +11,8 @@ Observe the merge, what type of merge happened?
 Create another branch feature-signup, add commits to it. Also add one commit directly on main before merging.
 Merge feature-signup into main — what happens this time?
 
+<img src="https://github.com/muhammadiishaq/90DaysOfDevOps/blob/master/2026/day-24/Screenshot-Task/merge.png" alt="snapshot" width="650"/>
+  
 ### Note Below answer in your notes:....
 
 **What is a fast-forward merge?**
@@ -32,6 +36,8 @@ Add a new commit directly to main.
 Switch to feature-dashboard and rebase it onto main.
 
 Check git log --oneline --graph --all and observe the history.
+
+<img src="https://github.com/muhammadiishaq/90DaysOfDevOps/blob/master/2026/day-24/Screenshot-Task/rebase.png" alt="snapshot" width="650"/>
 
 ### Notes Below Answer in your notes:....
 **What does rebase do to your commits?**
@@ -94,6 +100,8 @@ Try creating multiple stashes and list them using git stash list.
 
 Apply a specific stash if needed.
 
+<img src="https://github.com/muhammadiishaq/90DaysOfDevOps/blob/master/2026/day-24/Screenshot-Task/stas.png" alt="snapshot" width="650"/>
+
 ### Notes Below Answer in your notes:....
 
 **Difference between git stash pop and git stash apply...?**
@@ -114,6 +122,8 @@ Switch to main.
 Cherry-pick only the second commit from feature-hotfix.
 
 Verify using git log that only that specific commit was added.
+
+<img src="https://github.com/muhammadiishaq/90DaysOfDevOps/blob/master/2026/day-24/Screenshot-Task/cherry%20pack.png" alt="snapshot" width="650"/>
 
 ### Notes Below Answer in your notes:....
 
