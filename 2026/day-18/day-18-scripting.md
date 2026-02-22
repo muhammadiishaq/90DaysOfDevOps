@@ -84,3 +84,4 @@ Today, we focus on writing **cleaner, reusable scripts** using functions, strict
    
    ![task1](https://github.com/muhammadiishaq/90DaysOfDevOps/blob/master/2026/day-18/images/system.png)
 
+
