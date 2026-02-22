@@ -59,27 +59,27 @@ Docker uses a simple but effective architecture:
 
 The output confirms Docker is working and explains what happens when a container is started.  
 
-![snapshot](images/hello-world.png)
+![snapshot](Task-images/installation.png)
 
 ---
 
 ## Task 3: Running Real Containers
 - **Nginx container:** Run a web server container and access it in your browser.  
 
-  ![snapshot](images/nginx.png)
+  ![snapshot](Task-images/nginx-web.png)
 
 - **Ubuntu container:** Run interactively (`-it`) to explore it like a mini Linux environment.  
 
-  ![snapshot](images/ubuntu.png)
+  ![snapshot](Task-images/run-ubuntu.png)
 
 - **Managing containers:**  
   - List running containers: see what’s active  
   - List all containers: view stopped and running containers  
   - Stop or remove containers when they are no longer needed  
 
-  ![snapshot](images/ps.png)  
-  ![snapshot](images/ps-a.png)  
-  ![snapshot](images/rm-stop.png)
+  ![snapshot](Task-images/show-container.png)  
+ 
+  ![snapshot](Task-images/stop-rm-container.png)
 
 ---
 
@@ -88,23 +88,23 @@ The output confirms Docker is working and explains what happens when a container
 - **Naming containers:** Assign custom names for easier management instead of using random IDs.  
 - **Port mapping:** Map a container port to your host to make services accessible externally.  
 
-  ![snapshot](images/name.png)
+  ![snapshot](Task-images/run-nginx.png)
 
 - **Logs:** Check logs of a running container to monitor activity.  
 
-  ![snapshot](images/logs.png)
+  ![snapshot](Task-images/logs.png)
 
 - **Exec into container:** Run commands inside a live container for inspection or management.  
 
-  ![snapshot](images/exec.png)
+  ![snapshot](Task-images/run-cmd-inside-container.png)
 
 ---
 
 ## Task 5: Nginx Deployed Locally
 Your Nginx container serves web pages locally, showing how containers can host real applications quickly and consistently.  
 
-![snapshot](images/page1.png)  
-![snapshot](images/page2.png)
+![snapshot](Task-images/run-nginx.png)  
+![snapshot](Task-images/nginx-web.png)
 
 ---
 
@@ -116,16 +116,3 @@ Your Nginx container serves web pages locally, showing how containers can host r
 - Containers are the **foundation of modern DevOps workflows**, CI/CD pipelines, and microservices architectures.  
 
 ---
-
-## Submission
-- Save this `README.md` as `day-29-docker-basics.md` in `2026/day-29/`  
-- Include screenshots of running containers for reference  
-- Commit and push to your fork  
-
----
-
-## Share Your Progress
-Post your first Docker container screenshot on LinkedIn:  
-
-```text
-#90DaysOfDevOps #DevOpsKaJosh #TrainWithShubham
