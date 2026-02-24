@@ -17,7 +17,7 @@ This command fetches the latest available version of each image and stores it lo
 ```
 docker images
 ```
-   ![snapshot](Task-images/task1-images/images.png)
+   ![snapshot](Task-images/task1-images/docker-images.png)
 
 ### 1. This displays:
 Repository name
@@ -92,7 +92,7 @@ Docker images are built in layers. Every time you make a change to the file syst
 
 These layers are important because Docker saves (caches) them after building the image. When you build the image again, Docker reuses the layers that have not changed. This makes the build process faster and more efficient.
 
-   ![snapshot](Task-images/task1-images/images.png)
+   ![snapshot](Task-images/task1-images/images-hostory.png)
 
 ---
 
@@ -109,9 +109,11 @@ Practice the full lifecycle on one container:
 
 Check Below screenshot each step mentions — observe the state changes.
 
-   ![snapshot](images/state.png)
-    
-   ![snapshot](images/state1.png)
+   ![snapshot](Task-images/task1-images/docker-create-nginx.png)
+   ![snapshot](Task-images/task1-images/start-container.png)
+   ![snapshot](Task-images/task1-images/docker-cmd.png)
+   ![snapshot](Task-images/task4-images/stop-rm-cmd.png)
+
     
 ---
 
@@ -121,20 +123,22 @@ Check Below screenshot each step mentions — observe the state changes.
 ```
 docker run -d -p 80:80 nginx
 ```
-   ![snapshot](images/4-a.png)
+   ![snapshot](Task-images/task4-images/run-container.png)
+
     
 **2. View its logs**
 ```
 docker logs <container name or ID> 
 ```
-   ![snapshot](images/4-b.png)
+   ![snapshot](Task-images/task4-images/docker-logs.png)
+
     
 **3. View real-time logs (follow mode)**
 ```
 docker logs -f <container name>
 ```
 
-   ![snapshot](images/4-c.png)
+   ![snapshot](Task-images/task4-images/live-logs.png)
     
 **4. Exec into the container and look around the filesystem**
 ```
@@ -154,9 +158,7 @@ docker inspect <container-name>
 ```
 This command shows detailed information about the container in JSON format. From the output, you can find the internal container IP address, port bindings (how container ports are mapped to host ports), volume mounts, and network configuration. It helps you understand how the container is set up and connected.
 
-   ![snapshot](images/4-fip.png)
-   ![snapshot](images/4-fport.png)
-   ![snapshot](images/4-fmount.png)
+   ![snapshot](Task-images/task4-images/inspect.png)
 
 ---
 
@@ -165,26 +167,29 @@ This command shows detailed information about the container in JSON format. From
 ```
 docker stop $(docker ps -q)
 ```
-    ![snapshot](images/stop-all.png)
+   ![snapshot](Task-images/task5-images/docker-rm.png)
+
     
 2. Remove all stopped containers in one command
 ```
 docker rm $(docker ps -aq)
 ```
-    ![snapshot](images/rm-all.png)
+   ![snapshot](Task-images/task5-images/docker-rm.png)
     
 * Also using prune
 ```
 docker system prune
 ```    
-   ![snapshot](images/prune.png)
+   ![snapshot](Task-images/task5-images/docker-prune.png)
+
     
 3. Deleted dangling and unused images:
 ```
-
+docker rmi $(docker images)
 ```
 
-   ![snapshot](images/rm-images.png)
+   ![snapshot](Task-images/task5-images/rmi-images.png)
+
     
 4. To check Docker disk usage, use:
 ```
@@ -192,7 +197,8 @@ docker system df
 ```
 This command shows how much storage Docker is using. It displays the space used by images, containers, volumes, and the build cache. It helps you understand where your disk space is being used and manage it better.
 
- ![snapshot](images/df.png)
+   ![snapshot](Task-images/task5-images/system-df.png)
+
     
 ---
 
