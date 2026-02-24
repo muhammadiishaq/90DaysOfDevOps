@@ -35,12 +35,15 @@ This creates an image named my-ubuntu with tag v1.
 
 Step 4: Run the Container and see picture.
 
+
 ```
 docker run my-ubuntu:v1
 ✅ Output:
 Hello from my custom image!
 ```
+![snapshot](Task-images/t1.png)
 
+---
 ## Task 2: Practice Dockerfile Instructions
 
 Create a new Dockerfile that uses **all** of these instructions:
@@ -73,7 +76,9 @@ EXPOSE 80
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
 ```
+![snapshot](Task-images/t2.png)
 
+---
 ## Task 3: CMD vs ENTRYPOINT
 
 1. **CMD**  If you create an image with CMD ["echo", "hello"] and run it, it prints hello. If you run it with a custom command, that command replaces the default.
@@ -98,9 +103,7 @@ Notes:
 3. Build and tag it `my-website:v1`
 4. Run it with port mapping and access it in your browser
 
-    [Docker file](nginx-demo/dockerfile)
-
-    ![snapshot](images/website.png)
+![snapshot](Task-images/t4.png)
     
 ---
 
