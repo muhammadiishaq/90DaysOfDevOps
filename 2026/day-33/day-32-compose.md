@@ -22,7 +22,7 @@ First, I checked if Docker Compose was installed:
 docker compose version
 ```
 
-pic
+   ![snapshot](Task-images/t1.png)
 
 It showed the version successfully, which means Compose is available and ready to use.
 
@@ -69,6 +69,11 @@ docker compose down
 
 👉 With one file and one command, the container started and stopped.
 
+   ![snapshot](Task-images/t2.png)
+   ![snapshot](Task-images/t3.png)
+   ![snapshot](Task-images/t4.png)
+
+
 ## Task 3 – WordPress + MySQL Setup
 
 Now I created a multi-container setup.
@@ -88,23 +93,64 @@ My WordPress site and data were still there.
 
 Because MySQL is using a named volume, data is persistent.
 
+   ![snapshot](Task-images/tt1.png)
+   ![snapshot](Task-images/tt2.png)
+   ![snapshot](Task-images/t2.png)
+   ![snapshot](Task-images/tt3.png)
+
 
 
 ## Task 4 – Important Compose Commands
-Start in detached mode
+
+**Start in detached mode**
+
+```
 docker compose up -d
-View running services
+```
+   ![snapshot](Task-images/ttt1.png)
+
+
+**View running services**
+
+```
 docker compose ps
-View logs (all services)
+```
+   ![snapshot](Task-images/ttt2.png)
+
+**View logs (all services)**
+
+```
 docker compose logs -f
-View logs of specific service
+```
+   ![snapshot](Task-images/ttt3.png)
+
+**View logs of specific service**
+
+```
 docker compose logs -f db
-Stop without removing
+```
+   ![snapshot](Task-images/ttt4.png)
+
+**Stop without removing**
+
+```
 docker compose stop
-Remove everything
+```
+   ![snapshot](Task-images/ttt5.png)
+
+**Remove everything**
+
+```
 docker compose down
-Rebuild images
+```
+   ![snapshot](Task-images/ttt6.png)
+
+**Rebuild images**
+
+```
 docker compose up -d --build
+```
+   ![snapshot](Task-images/ttt7.png)
 
 Now I clearly understand how to manage multi-container apps easily.
 
@@ -114,9 +160,8 @@ Now I clearly understand how to manage multi-container apps easily.
 2. Create a `.env` file and reference variables from it in your compose file
 3. Verify the variables are being picked up
 
-   [All Files](Two-Container)
    
-   ![snapshot](images/5.png)
+   ![snapshot](Task-images/tttt1.png)
    
 ---
 
