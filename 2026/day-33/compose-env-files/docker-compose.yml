@@ -1,0 +1,48 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: wp-mysql
+    
+    # here they will pick env file for values
+ 
+    env_file:
+      - path: ./mysql.env
+
+    ports:
+      - 3306:3306
+    volumes:
+      - wp-mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD","mysqladmin","ping","-h","localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - wp-net
+  wordpress:
+    image: wordpress:latest
+    container_name: wp-wordpress
+    depends_on:
+      mysql:
+        condition: service_healthy
+    
+    # here they will pick env file for values
+    env_file:
+      - path: ./wp.env
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - wp-data:/var/www/html
+    networks:
+      - wp-net
+
+volumes:
+    wp-mysql:
+    wp-data:
+
+networks:
+    wp-net:
+      driver: bridge
+
