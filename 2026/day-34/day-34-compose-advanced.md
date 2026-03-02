@@ -10,6 +10,8 @@ Create a `docker-compose.yml` for a 3-service stack:
 
     [own-app](own-app/)
 
+  ![image](images/compose-up.png)
+
 ---
 
 ## Task 2: depends_on & Healthchecks
@@ -29,7 +31,7 @@ docker compose up
 2. Manually kill the database container — does it come back?
     - yes its start
 
-    ![image](images/task3.1.png)
+
 
 3. Try `restart: on-failure` — how is it different?
    - There is no difference
@@ -46,6 +48,9 @@ docker compose up
             Data processing jobs
             One-time migration scripts
             backups
+      
+        ![image](images/app.png)
+
 ---
 
 ## Task 4: Custom Dockerfiles in Compose
@@ -53,10 +58,9 @@ docker compose up
 2. Make a code change in your app
 3. Rebuild and restart with one command
 
-  [Dockerfile](web_db_cache/app/Dockerfile)
+  [Dockerfile](own-app/app/Dockerfile)
 
 
-  ![image](images/before.png)
 
 ---
 
