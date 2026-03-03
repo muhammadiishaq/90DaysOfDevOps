@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres:16-alpine
+    container_name: notes_postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - postgres_storage:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - app_network
+    labels:
+      role: "db"
+
+  backend:
+    image: muhammadiishaq/flask-app:v1
+    container_name: notes_backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@database:5432/${POSTGRES_DB}
+      FLASK_RUN_HOST: 0.0.0.0
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - app_network
+    labels:
+      role: "api"
+
+volumes:
+  postgres_storage:
+
+networks:
+  app_network:
+    driver: bridge
