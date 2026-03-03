@@ -9,10 +9,12 @@
 
    - Image Size is 452 MB
 
-   ![image](images/task1.png)
+   ![image](images/t1.png)
+   ![image](images/t2.png)
 
 
-   [Dockerfile](hello-java/Dockerfile)
+
+   [Dockerfile](Java-Hello/Dockerfile)
 
 
 ---
@@ -31,10 +33,10 @@ Compare both image sizes:
 
 - Multi-stage build image size: 255 MB
 
-  ![images](images/task2.png)
+  ![images](images/tt1.png)
 
 
-  [Dockerfile](hello-java/Dockerfile.multistage)
+  [Dockerfile](React-app/Dockerfile.multistage)
 
 
 3. Why is the multi-stage image significantly smaller?
@@ -53,12 +55,12 @@ During the first stage, all build tools and dependencies are used to compile the
 5. Pull it on a different machine (or after removing locally) to verify
 
 
-   ![image](images/task3.1.png)
+  ![images](images/ttt1.png)
 
 
-   ![image](images/task3.2.png)
+  ![images](images/ttt2.png)
 
-   ![image](images/task3.3.png)
+  ![images](images/ttt3.png)
 
 ---
 
@@ -79,7 +81,7 @@ Using specific tags ensures consistency and stability because you always get the
 
 On the other hand, relying on latest can lead to unexpected changes since it may point to a newer image if the repository gets updated.
 
-   ![image](images/task4.png)
+   ![image](images/tttt1.png)
 
 
 
