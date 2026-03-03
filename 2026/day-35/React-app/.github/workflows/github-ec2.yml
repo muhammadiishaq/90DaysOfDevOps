@@ -1,0 +1,62 @@
+name: Push-to-EC2 instance
+
+# Trigger deployment only on push to master branch 
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Push to EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}   # should be "ubuntu"
+          TARGET: ${{ secrets.TARGET_DIR }}      # e.g. /home/ubuntu/app
+
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}   # "ubuntu"
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # Update system
+            sudo apt update -y
+            sudo apt upgrade -y
+
+            # Install Apache, Node.js, and npm
+            sudo apt install -y apache2 nodejs npm
+
+            # Start & enable Apache
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
+
+            # Go to deployment folder
+            cd ${{ secrets.TARGET_DIR }}
+
+            # Clean previous installs
+            rm -rf node_modules package-lock.json
+
+            # Install dependencies (respect lockfile)
+            npm ci --legacy-peer-deps
+
+            # Build React app
+            npm run build
+
+            # Deploy build output to Apache web root
+            sudo rm -rf /var/www/html/*
+            sudo cp -r build/* /var/www/html/
+
+            # Restart Apache
+            sudo systemctl restart apache2
