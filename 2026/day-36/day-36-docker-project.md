@@ -5,7 +5,8 @@
 
 Develop a Flask-based Python application connected to a database.
 
-   [App](app/)
+ [Note-App](Note-App/) Click on this to get code.
+
 ---
 
 
@@ -19,7 +20,7 @@ Develop a Flask-based Python application connected to a database.
 
 Build the image and verify that it runs correctly in your local environment.
     
-   [Dockerfile](app/Dockerfile)
+   [Dockerfile](Note-App/Dockerfile) Click to get docker file.
 
 ---
 
@@ -34,7 +35,7 @@ Write a `docker-compose.yml` that includes:
 
 Run `docker compose` up and confirm that all services communicate properly.
 
-[Docker Compose](./app/docker-compose.yml)
+[Docker Compose](Note-App/docker-compose.yml) Click to get docker-compose file.
 
 ---
 
@@ -49,10 +50,10 @@ Run `docker compose` up and confirm that all services communicate properly.
    - Any environment variables needed
 
 
-    [Tag & Push](app/push.png)
+    ![Tag & Push](images/push.png)
 
 
-    [DockerHub](app/dckrhub.png)
+    ![DockerHub](images/docker.png)
 ---
 
 ### Task 5: Test the Whole Flow
@@ -62,7 +63,7 @@ Run `docker compose` up and confirm that all services communicate properly.
 
 - Application runs successfully on a fresh setup.
 
-    [Working App](app/app.png)
+    ![Working App](images/Notes-app.png)
 
 
 ---
@@ -73,9 +74,13 @@ Create `day-36-docker-project.md` with:
 - Your Dockerfile (with comments explaining each line)
 - Challenges you faced and how you solved them
 - Final image size
+- Final Image size is 242 MB
+  
 - Docker Hub link
+- **Doceker Hub Link** : https://hub.docker.com/repository/docker/muhammadiishaq/flask-app
 
-    - Final Image size is 242 MB
+
+---
 
 ### Challenges Faced
 
@@ -86,9 +91,11 @@ Fixed by using mongosh ping command
 Ensured container waits until DB is healthy
 
     
-   **Doceker Hub Link** : https://hub.docker.com/repository/docker/sanketdangat11/notes-app/general
+ ###  **Doceker Hub Link** : https://hub.docker.com/repository/docker/muhammadiishaq/flask-app
 
-    [Project README](app/README.md)
+### Project Readme files below 
+
+[**Project README**](Notes-App/README.md)
 
 ---
 
