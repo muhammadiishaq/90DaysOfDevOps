@@ -1,0 +1,11 @@
+server:
+  name: data-server
+  ip: 192.168.1.10
+  port: 8080
+
+database:
+  host: localhost
+  name: db-server
+  credentials:
+    user: ishaq
+    password: ishaq123
