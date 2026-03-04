@@ -16,9 +16,9 @@ Create `person.yaml` that describes yourself with:
 **Verify:** Run `cat person.yaml` — does it look clean? No tabs?   
 - Yes It's look clean, no tabs, no error.
 
-    ![images](images/key_value.png)
+    ![images](images/t1.png)
 
-    [person.yaml](yamls/person.yaml)
+    [person.yaml](ymls-files/person.yaml)
 
 ---
 
@@ -41,7 +41,9 @@ Lists in YAML can be written in two ways:
    - Inline style using [item1, item2]
 Both are valid and commonly used.
 
-   [person.yaml](yamls/person.yaml)
+   ![images](images/t3.png)
+     
+   [update-person.yaml](ymls-files/update-person.yml)
 
 ---
 
@@ -58,9 +60,8 @@ Nested objects are created using indentation.
 Each level is indented using 2 spaces.
 If you use tabs instead of spaces, YAML validation will fail.
 
-   ![image](images/task3.png)
 
-   [server.yaml](yamls/server.yaml)
+   [server.yaml](ymls-files/server.yml)
 
 ---
 
@@ -76,7 +77,7 @@ When would you use `|` vs `>`?
 - `>` use when you want multiple lines in YAML but stored as one single line.
 Very useful in CI/CD pipeline messages.
 
-    [server2](yamls/server2.yaml)
+   [server.yaml](ymls-files/server-2.yaml)
 
 ---
 
@@ -89,11 +90,11 @@ Very useful in CI/CD pipeline messages.
     
 ### **get error**
 
-![image](images/key_valueerror.png)
+   ![images](images/t5.png)
 
 ### **Fixed**
 
-![image](images/key_valufix.png)
+   ![images](images/t5-1.png)
 
 ---
 
@@ -110,7 +111,7 @@ tools:
 ```
 ## Block 2 - broken
 ```
-# Block 2 - broken
+
 name: devops
 tools:
 - docker
