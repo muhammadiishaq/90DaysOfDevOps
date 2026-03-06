@@ -11,8 +11,9 @@ This workflow runs automatically when code is pushed to the repository.
 2. Clone it locally
 3. Create the folder structure: `.github/workflows/`
 
-   [GitHub-Repo.](images/task1.png)
-   ![image](images/task1.png)
+   [**GitHub-Repo.**](hello-yml-files/hello.yml)
+   
+   ![image](images/tttt1.png)
 
 ---
 
@@ -32,7 +33,7 @@ Push it. Go to the **Actions** tab on GitHub and watch it run.
 
    - Yes My CI work awesome color green.
 
-   ![image](images/task2.png)
+   ![image](images/t1.png)
 
 ---
 
@@ -74,7 +75,7 @@ Update `hello.yml` to also:
 3. List the files in the repo
 4. Print the runner's operating system
 
-   ![image](images/task4.png)
+   ![image](images/ttt1.png)
 
 ---
 
@@ -85,10 +86,11 @@ Update `hello.yml` to also:
 
 
 - **Error**
-  ![image](images/task5.png)
-   
+  ![image](images/tt1.png)
+  ![image](images/tt2.png)
+
 - **After Fix**
-  ![image](images/task5.1.png)
+  ![image](images/e1.png)
 
  ---
 
